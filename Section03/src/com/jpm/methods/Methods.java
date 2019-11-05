@@ -1,4 +1,4 @@
-package com.jpm;
+package com.jpm.methods;
 
 public class Methods
 {
