@@ -7,7 +7,8 @@ public class MethodOverloading
 	{
 		int newScore = calculateScore("test", 5000);
 		System.out.println("New Score: " + newScore);
-		newScore = calculateScore(5000);
+		calculateScore(5000);
+		calculateScore();
 	}
 	
 	public static int calculateScore(String playerName, int score)
@@ -21,5 +22,9 @@ public class MethodOverloading
 		System.out.println("Unnamed player: , Score: " + score);
 		return score * 1000;
 	}
-
+	
+	public static void calculateScore()
+	{
+		System.out.println("No score or name");
+	}
 }
