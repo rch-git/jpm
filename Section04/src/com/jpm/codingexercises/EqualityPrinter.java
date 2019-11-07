@@ -28,5 +28,4 @@ public class EqualityPrinter
 			System.out.println("Neither all are equal or different");
 		}
 	}
-
 }
