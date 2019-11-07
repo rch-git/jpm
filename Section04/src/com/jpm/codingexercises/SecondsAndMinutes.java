@@ -6,8 +6,8 @@ public class SecondsAndMinutes
 
 	public static void main(String[] args)
 	{
-		 System.out.println(getDurationString(99, 59));
-		 System.out.println(getDurationString(99));
+		 System.out.println(getDurationString(8, 8));
+		 System.out.println(getDurationString(8));
 	}
 	
 	public static String getDurationString(long minutes, long seconds)
