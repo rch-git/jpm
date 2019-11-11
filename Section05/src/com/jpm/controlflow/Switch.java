@@ -5,8 +5,6 @@ public class Switch
 
 	public static void main(String[] args)
 	{
-		int switchValue = 1;
-		
 		String[] abc = {"a", "b", "c"}; 
 		
 		switch(abc[1])

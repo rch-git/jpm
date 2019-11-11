@@ -8,8 +8,8 @@ public class Palindrome
 		int reverseNum = palindrome(-222);
 		System.out.println(reverseNum);
 		
-		boolean isPalindrome;
-		System.out.println(isPalindrome = isPalindrome(-222));
+		boolean isPalindrome = isPalindrome(-222);
+		System.out.println(isPalindrome);
 	}
 	
 	public static int palindrome (int number)
