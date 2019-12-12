@@ -25,8 +25,10 @@ public class PaintJob
 		}
 	}
 	
-	public static int getBucketCount(double width, double height, double areaPerBucket)
-	{
-		
-	}
+	/*
+	 * public static int getBucketCount(double width, double height, double areaPerBucket)
+	 * {
+	 * 
+	 * }
+	 */
 }
