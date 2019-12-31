@@ -19,8 +19,6 @@ public class VipCustomer
 		this("John Doe", 1234, "example@example.com");
 	}
 	
-	
-
 	public VipCustomer(double creditLimit, String email)
 	{
 		this("John Doe 2", creditLimit, email);
@@ -55,6 +53,4 @@ public class VipCustomer
 	{
 		this.email = _email;
 	}
-	
-	
 }
