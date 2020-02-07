@@ -1,4 +1,4 @@
-package com.jmp.oopchallenge;
+package com.jpm.oopchallenge;
 
 public class Hamburger
 {

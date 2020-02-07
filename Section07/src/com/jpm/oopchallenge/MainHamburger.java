@@ -1,4 +1,4 @@
-package com.jmp.oopchallenge;
+package com.jpm.oopchallenge;
 
 import java.text.DecimalFormat;
 
@@ -23,8 +23,9 @@ public class MainHamburger
 		hb.addOns("5");
 		hb.addOns("6");
 		hb.addOns("7");
-		
-		System.out.println("Health burger price: $" + df.format(hb.getPrice()));
+		System.out.println("Number of current addons: " + hb.getNumberOfAddons());
+				
+		System.out.println("Healthy burger price: $" + df.format(hb.getPrice()));
 		System.out.println(hb.getRollType());
 		
 		DeluxeHamburger dh = new DeluxeHamburger();

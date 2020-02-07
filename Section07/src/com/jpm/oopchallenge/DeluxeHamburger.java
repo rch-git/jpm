@@ -1,7 +1,9 @@
-package com.jmp.oopchallenge;
+package com.jpm.oopchallenge;
 
 public class DeluxeHamburger extends Hamburger
 {
+	private int numberOfAddons;
+	
 	public DeluxeHamburger()
 	{
 		super();
@@ -9,7 +11,8 @@ public class DeluxeHamburger extends Hamburger
 		addOns("drink");
 	}
 	
-	public void addOns()
+	@Override
+	public void addOns(String addOns)
 	{
 		
 	}

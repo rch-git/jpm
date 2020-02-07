@@ -1,4 +1,4 @@
-package com.jmp.oopsolution;
+package com.jpm.oopsolution;
 
 public class Hamburger
 {
@@ -83,5 +83,4 @@ public class Hamburger
 		
 		return hamburgerPrice;
 	}
-	
 }
