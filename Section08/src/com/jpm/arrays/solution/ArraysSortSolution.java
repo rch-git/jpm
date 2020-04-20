@@ -3,7 +3,7 @@ package com.jpm.arrays.solution;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraysSolution
+public class ArraysSortSolution
 {
 	public static Scanner scanner = new Scanner(System.in);
 	
@@ -67,40 +67,3 @@ public class ArraysSolution
 		return sortedArray;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
