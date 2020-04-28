@@ -18,7 +18,7 @@ public class MainMobilePhone
 			System.out.println("Enter action: (6 to show available actions)");
 			int action = scanner.nextInt();
 			scanner.nextLine();
-			
+			 
 			switch(action)
 			{
 				case 0:
