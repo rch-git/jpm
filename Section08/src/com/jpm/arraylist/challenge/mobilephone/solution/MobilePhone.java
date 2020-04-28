@@ -33,6 +33,12 @@ public class MobilePhone
 			System.out.println(oldContact.getName() + " is not found.");
 			return false;
 		}
+		else if(findContact(newContact.getName()) != -1)
+		{
+			System.out.println(newContact.getName() + " already exists.");
+			return false;
+		}
+		
 //		If the user entered -1 for phone number, then get the phone number from the oldContact, and set it 
 //		as the phone number for newContact
 		if(newContact.getPhoneNo().equals("-1"))
