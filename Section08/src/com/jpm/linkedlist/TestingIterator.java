@@ -34,9 +34,6 @@ public class TestingIterator
 		{
 			System.out.println("Next index: " + li.nextIndex());
 			System.out.println("Next string: " + li.next());
-//			li.next();
-//			System.out.println("Previous string: " + li.previous());
-//			System.out.println("Previous index: " + li.previousIndex());
 		}
 		
 		while(li.hasPrevious())
