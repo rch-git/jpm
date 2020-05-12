@@ -44,6 +44,7 @@ public class PlaylistOperations
 				case 0:
 					printMenu();
 					break;
+//				Going forward
 				case 1:
 					if(!goingForward)
 					{
@@ -63,6 +64,7 @@ public class PlaylistOperations
 						goingForward = false;
 					}
 					break;
+//				Going backwards
 				case 2:
 					if(goingForward)
 					{
@@ -82,6 +84,7 @@ public class PlaylistOperations
 						goingForward = true;
 					}
 					break;
+//				Repeat
 				case 3:
 					if(goingForward)
 					{
@@ -118,17 +121,26 @@ public class PlaylistOperations
 					quit = true;
 					break;
 				case 6:
-					if(li.hasNext())
+					if(s.size() > 0)
 					{
 						li.remove();
-						System.out.println("Now playing: " + li.next().getSongName());
+						if(li.hasNext())
+						{
+							System.out.println("Now playing: " + li.next().getSongName());
+						}
+						else if (li.hasPrevious())
+						{
+							System.out.println("Now playing: " + li.previous().getSongName());
+						}
 					}
 					else
 					{
-						li.remove();
-						System.out.println("Now playing: " + li.previous().getSongName());
+						System.out.println("No songs in the playlist.");
 					}
-					
+					break;
+				default:
+					System.out.println("Try again.");
+					break;
 			}
 		}
 	}
