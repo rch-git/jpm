@@ -66,12 +66,13 @@ public class Burger
 	public void printBurgerDetails()
 	{
 		System.out.println("Protein: " + this.protein);
-		System.out.println("Number of patties: " + this.numberOfExtraPatties);
+		System.out.println("Number of extra patties: " + this.numberOfExtraPatties);
 		System.out.println("Type of Bread: " + this.typeOfBread);
 		System.out.println("Toppings: ");
 		for(String s : this.toppings)
 		{
 			System.out.println(s);
 		}
+		System.out.println("----");
 	}
 }

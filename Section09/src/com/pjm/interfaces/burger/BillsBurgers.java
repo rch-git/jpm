@@ -9,6 +9,14 @@ public class BillsBurgers
 	{
 		BillsOrderingSystem bos = new BillsOrderingSystem();
 		List<Object> burgers = BuildBurgers.buildBurger();
+		System.out.println("---Burger details---");
+		for(Object b : burgers)
+		{
+			if(b instanceof Burger)
+			{
+				((Burger) b).printBurgerDetails();
+			}
+		}
 		bos.printReceipt(burgers);
 	}
 }

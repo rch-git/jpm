@@ -7,10 +7,10 @@ public class BillsOrderingSystem implements OrderingSystem
 {
 
 	private double basePrice = 4.0;
-	private double pricePerTopping = 0.30;
+	private double pricePerTopping = 0.25;
 	private final double salesTax = 8.75/100;
 	private double pricePerPatty = 1.25;
-
+	private double glutenFree = 0.25;
 	
 	/**
 	 * Sales tax is not applied. 
@@ -50,7 +50,7 @@ public class BillsOrderingSystem implements OrderingSystem
 		priceForExtraPatties = burger.getNumberOfExtraPatties() * this.pricePerPatty;
 		if(burger.getTypeOfBread().equalsIgnoreCase("gluten free"))
 		{
-			pricePerBurger += 0.30;
+			pricePerBurger += this.glutenFree;
 		}
 		
 		pricePerBurger += this.basePrice + toppingsPrice + priceForExtraPatties;
@@ -91,7 +91,7 @@ public class BillsOrderingSystem implements OrderingSystem
 				}
 				if(b.getTypeOfBread().equalsIgnoreCase("gluten free"))
 				{
-					System.out.println("\t\tgluten free: $0.30");
+					System.out.println("\t\tgluten free: $" + this.glutenFree);
 				}
 				System.out.println("\t\tPrice: $" + nf.format(calculatePricePerBurger(b)));
 			}
