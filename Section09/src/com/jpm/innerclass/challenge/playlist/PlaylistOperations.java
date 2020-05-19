@@ -1,4 +1,4 @@
-package com.jpm.interfaces.linkedlist;
+package com.jpm.innerclass.challenge.playlist;
 
 import java.util.LinkedList;
 import java.util.ListIterator;

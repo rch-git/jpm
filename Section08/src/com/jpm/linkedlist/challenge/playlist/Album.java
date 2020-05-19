@@ -1,17 +1,18 @@
 package com.jpm.linkedlist.challenge.playlist;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Album
 {
 	private String albumName;
-	private ArrayList<Song> songs = new ArrayList<Song>();
+	private List<Song> songs = new ArrayList<Song>();
 	
 	public String getAlbumName()
 	{
 		return albumName;
 	}
-	public ArrayList<Song> getSongs()
+	public List<Song> getSongs()
 	{
 		return songs;
 	}
@@ -40,11 +41,10 @@ public class Album
 		}
 	}
 	
-	public Album(String albumName, ArrayList<Song> songs)
+	public Album(String albumName)
 	{
 		super();
 		this.albumName = albumName;
-		this.songs = songs;
 	}
 	
 	private int songLocation(String songName)

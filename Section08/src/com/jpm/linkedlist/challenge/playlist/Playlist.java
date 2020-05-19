@@ -2,6 +2,7 @@ package com.jpm.linkedlist.challenge.playlist;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Playlist
 {
@@ -29,7 +30,7 @@ public class Playlist
 		if(position < 0)
 		{
 			this.albums.add(album);
-			ArrayList<Song> songsInAlbum = album.getSongs();
+			List<Song> songsInAlbum = album.getSongs();
 			for(int i = 0; i < songsInAlbum.size(); i++)
 			{
 				this.songsPlayList.add(songsInAlbum.get(i));

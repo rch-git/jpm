@@ -17,31 +17,19 @@ public class PopulateData
 	public static ArrayList<Album> createAlumbs()
 	{
 		ArrayList<Album> albums = new ArrayList<Album>();
-		ArrayList<Song> songList1 = new ArrayList<Song>();
-		Song a1 = new Song("a1", 10);
-		Song a2 = new Song("a2", 10);
-		Song a3 = new Song("a3", 10);
-		Song a4 = new Song("a4", 10);
 		
-		songList1.add(a1);
-		songList1.add(a2);
-		songList1.add(a3);
-		songList1.add(a4);
+		Album a = new Album("a");
+		a.addSongs("a1", 10);
+		a.addSongs("a2", 10);
+		a.addSongs("a3", 10);
+		a.addSongs("a4", 10);
 		
-		Album a = new Album("a", songList1);
-		
-		ArrayList<Song> songList2 = new ArrayList<Song>();
-		Song b1 = new Song("b1", 10);
-		Song b2 = new Song("b2", 10);
-		Song b3 = new Song("b3", 10);
-		Song b4 = new Song("b4", 10);
-		
-		songList2.add(b1);
-		songList2.add(b2);
-		songList2.add(b3);
-		songList2.add(b4);
-		
-		Album b = new Album("b", songList2);
+		Album b = new Album("b");
+		b.addSongs("b1", 10);
+		b.addSongs("b2", 10);
+		b.addSongs("b3", 10);
+		b.addSongs("b4", 10);
+		b.addSongs("b1", 10);
 		
 		albums.add(a);
 		albums.add(b);
