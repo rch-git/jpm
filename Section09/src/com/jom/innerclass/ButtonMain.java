@@ -8,6 +8,8 @@ public class ButtonMain
 {
 	private static Scanner scanner = new Scanner(System.in);
 	private static Button btnPrint = new Button("Print");
+	private static Button btnPrint2 = new Button("Print2");
+	private static Button btnPrint3 = new Button("Print3");
 
 	public static void main(String[] args)
 	{
@@ -32,9 +34,13 @@ public class ButtonMain
 			public void onClick(String title)
 			{
 				System.out.println(title + " was clicked.(anonymous inner class)");
-				
 			}
 		});
+		
+		
+		btnPrint2.onClick();
+		
+		btnPrint3.setOnClickListener(new ClickListener());
 		
 		listen();
 	}
@@ -42,7 +48,7 @@ public class ButtonMain
 	private static void listen()
 	{
 		boolean quit = false;
-		
+		System.out.println("Press 0 (to quit) or 1 to continue.");
 		while(!quit)
 		{
 			int choice = scanner.nextInt();
@@ -54,6 +60,14 @@ public class ButtonMain
 				case 1:
 					btnPrint.onClick();
 					break;
+				case 2:
+					btnPrint2.onClick();
+					break;
+				case 3:
+					btnPrint3.onClick();
+					break;
+				default: 
+					System.out.println("Try again.");
 			}
 		}
 	}
