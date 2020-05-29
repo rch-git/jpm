@@ -1,4 +1,4 @@
-package com.jpm.abstractclass.challenge.mylinkedlist;
+package com.jpm.abstractclass.challenge.base;
 
 /**
  * This is the interface for a GenericList. This should be implemented by all classes 
@@ -11,7 +11,7 @@ package com.jpm.abstractclass.challenge.mylinkedlist;
 public interface GenericList
 {
 	GenericListItem getRoot();
-	boolean addItem(GenericListItem gli);
-	boolean removeItem(GenericListItem gli);
-	void traverse(GenericListItem gli);
+	boolean addItem(GenericListItem newItem);
+	boolean removeItem(GenericListItem itemToRemove);
+	void traverse(GenericListItem listToPrint);
 }

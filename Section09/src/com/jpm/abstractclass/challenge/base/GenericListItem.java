@@ -1,4 +1,4 @@
-package com.jpm.abstractclass.challenge.mylinkedlist;
+package com.jpm.abstractclass.challenge.base;
 
 public abstract class GenericListItem
 {
@@ -12,10 +12,10 @@ public abstract class GenericListItem
 		this.value = value;
 	}
 
-	protected abstract GenericListItem next();
+	public abstract GenericListItem next();
 	protected abstract GenericListItem previous();
-	protected abstract void setNext(GenericListItem rightLink);
-	protected abstract void setPrevious(GenericListItem leftLink);
+	public abstract void setNext(GenericListItem rightLink);
+	public abstract void setPrevious(GenericListItem leftLink);
 	protected abstract int compareTo(GenericListItem item);
 	
 	public Object getValue()

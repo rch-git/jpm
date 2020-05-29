@@ -1,4 +1,6 @@
-package com.jpm.abstractclass.challenge.mylinkedlist;
+package com.jpm.abstractclass.challenge.stringlist.impl;
+
+import com.jpm.abstractclass.challenge.base.GenericListItem;
 
 /**
  * This is a specific implementation of GenericListItem for MyStringList
@@ -15,7 +17,7 @@ public class Letter extends GenericListItem
 	}
 
 	@Override
-	protected GenericListItem next()
+	public GenericListItem next()
 	{
 		return this.rightLink;
 	}
@@ -27,13 +29,13 @@ public class Letter extends GenericListItem
 	}
 
 	@Override
-	protected void setNext(GenericListItem rightLink)
+	public void setNext(GenericListItem rightLink)
 	{
 		this.rightLink = rightLink;
 	}
 
 	@Override
-	protected void setPrevious(GenericListItem leftLink)
+	public void setPrevious(GenericListItem leftLink)
 	{
 		this.leftLink = leftLink;
 	}
