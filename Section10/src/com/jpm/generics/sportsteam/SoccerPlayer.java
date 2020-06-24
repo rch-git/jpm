@@ -1,4 +1,4 @@
-package com.jpm.generics;
+package com.jpm.generics.sportsteam;
 
 public class SoccerPlayer extends Player
 {
