@@ -53,6 +53,16 @@ public class Team<T extends Player>
 		return this.members.size();
 	}
 	
+	/**
+	 * This method takes in a team, and a set of scores to calculate the result. 
+	 * Team<T> opponent ensures that a only teams of same sport can compete with each other.
+	 * 
+	 * footballTeam.matchResult(baseballTeam, 2, 3); is invalid
+	 * 
+	 * @param opponent
+	 * @param ourScore
+	 * @param theirScore
+	 */
 	public void matchResult(Team<T> opponent, int ourScore, int theirScore)
 	{
 		if(ourScore > theirScore)

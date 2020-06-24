@@ -21,14 +21,6 @@ public class TeamOps
 		System.out.println("Number of player(s) in team " + footballTeam2.getTeamName() + ": " + footballTeam2.numPlayers());
 		System.out.println(fp2.getStats());
 		
-		footballTeam.matchResult(footballTeam2, 2, 3);
-		footballTeam2.matchResult(footballTeam, 3, 1);
-		footballTeam.matchResult(footballTeam2, 1, 1);
-		
-		footballTeam.printTeamStats();
-		footballTeam2.printTeamStats();
-		
-		
 		Team<BaseballPlayer> baseballTeam = new Team<>("Baseball Team");
 		baseballTeam.addPlayer(bp);
 		System.out.println("Number of player(s) in team " + baseballTeam.getTeamName() + ": " + baseballTeam.numPlayers());
@@ -38,5 +30,11 @@ public class TeamOps
 		soccerTeam.addPlayer(sp);
 		System.out.println("Number of player(s) in team " + soccerTeam.getTeamName() + ": " + soccerTeam.numPlayers());
 		System.out.println(sp.getStats());
+				
+		footballTeam.matchResult(footballTeam2, 2, 3);
+		footballTeam2.matchResult(footballTeam, 3, 1);
+		
+		footballTeam.printTeamStats();
+		footballTeam2.printTeamStats();
 	}
 }
