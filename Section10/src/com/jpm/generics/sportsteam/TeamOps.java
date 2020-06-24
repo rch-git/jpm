@@ -38,8 +38,5 @@ public class TeamOps
 		soccerTeam.addPlayer(sp);
 		System.out.println("Number of player(s) in team " + soccerTeam.getTeamName() + ": " + soccerTeam.numPlayers());
 		System.out.println(sp.getStats());
-		
-		
 	}
-
 }
