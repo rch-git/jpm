@@ -3,32 +3,32 @@ package com.jpm.generics.challenge.league;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class League<T extends Team<Player>>
+public class League<T extends Team>
 {
-	public String leagueName;
+	public String name;
 	private ArrayList<T> league = new ArrayList<>();
-	
-	public League(String leagueName)
+
+	public League(String name)
 	{
-		super();
-		this.leagueName = leagueName;
+		this.name = name;
 	}
 
-	public boolean addTeam(T team)
+	public boolean add(T team)
 	{
-		if(!league.contains(team))
-		{
-			league.add(team);
-			return true;
-		}
-		else
+		if (league.contains(team))
 		{
 			return false;
 		}
+		league.add(team);
+		return true;
 	}
-	
+
 	public void showLeagueTable()
 	{
 		Collections.sort(league);
+		for (T t : league)
+		{
+			System.out.println(t.getTeamName() + ": " + t.ranking());
+		}
 	}
 }
