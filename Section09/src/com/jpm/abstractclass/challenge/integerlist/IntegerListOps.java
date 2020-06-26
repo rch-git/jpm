@@ -17,7 +17,6 @@ public class IntegerListOps
 		}
 		
 		integerList.traverse(integerList.getRoot());
-		
 	}
 
 }

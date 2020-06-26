@@ -1,4 +1,4 @@
-package com.jpm.generics.sportsteam;
+package com.jpm.generics.challenge.league;
 
 import java.util.ArrayList;
 /**
@@ -11,9 +11,9 @@ import java.util.ArrayList;
  * 
  * @author Ravi
  *
- * @param <T>
+ * @param <P>
  */
-public class Team<T extends Player> implements Comparable<Team<T>>
+public class Team<P extends Player> implements Comparable<Team<P>>
 {
 	private String teamName;
 	private int played = 0;
@@ -21,7 +21,7 @@ public class Team<T extends Player> implements Comparable<Team<T>>
 	private int lost = 0;
 	private int tied = 0;
 	
-	private ArrayList<T> members = new ArrayList<T>();
+	private ArrayList<P> members = new ArrayList<P>();
 	
 	public Team(String teamName)
 	{
@@ -33,7 +33,7 @@ public class Team<T extends Player> implements Comparable<Team<T>>
 		return this.teamName;
 	}
 	
-	public boolean addPlayer(T player)
+	public boolean addPlayer(P player)
 	{
 		if(members.contains(player))
 		{
@@ -63,7 +63,7 @@ public class Team<T extends Player> implements Comparable<Team<T>>
 	 * @param ourScore
 	 * @param theirScore
 	 */
-	public void matchResult(Team<T> opponent, int ourScore, int theirScore)
+	public void matchResult(Team<P> opponent, int ourScore, int theirScore)
 	{
 		if(ourScore > theirScore)
 		{
@@ -101,7 +101,7 @@ public class Team<T extends Player> implements Comparable<Team<T>>
 	}
 
 	@Override
-	public int compareTo(Team<T> o)
+	public int compareTo(Team<P> o)
 	{
 		if(this.ranking() > o.ranking())
 		{
