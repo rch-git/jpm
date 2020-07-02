@@ -1,37 +1,33 @@
-package com.jpm.abstractclass.challenge.integerlist.impl;
+package com.jpm.generics.lists.shapes.impl;
 
-import com.jpm.abstractclass.challenge.base.GenericList;
-import com.jpm.abstractclass.challenge.base.GenericListItem;
-import com.jpm.abstractclass.challenge.stringlist.impl.Letter;
+import com.jpm.generics.lists.base.GenericList;
+import com.jpm.generics.lists.base.GenericListItem;
+import com.jpm.generics.lists.colors.impl.ColorItem;
 
-public class IntegerList implements GenericList
+public class ShapeList implements GenericList<ShapeItem>
 {
-	private Num root = null;
-	
-	public IntegerList(Num root)
+	private ShapeItem root = null;
+
+	@Override
+	public ShapeItem getRoot()
 	{
-		this.root = root;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public GenericListItem getRoot()
-	{
-		return this.root;
-	}
-
-	@Override
-	public boolean addItem(GenericListItem newItem)
+	public boolean addItem(ShapeItem newItem)
 	{
 //		If the root is null, the list is empty, therefore, 
 //		the element being added is the root
 		if(this.root == null)
 		{
-			this.root = (Num) newItem;
+			this.root = newItem;
 			return true;
 		}
 		
 //		If list is not empty, we start the process of figuring out where to add newItem
-		Num currentItem = this.root;
+		ShapeItem currentItem = this.root;
 
 		while(currentItem != null)
 		{
@@ -43,7 +39,7 @@ public class IntegerList implements GenericList
 //				we cycle through the elements until we find the right spot
 				if(currentItem.next() != null)
 				{
-					currentItem = (Num) currentItem.next();
+					currentItem = currentItem.next();
 				}
 				else
 				{
@@ -70,7 +66,7 @@ public class IntegerList implements GenericList
 				{
 					newItem.setNext(currentItem);
 					currentItem.setPrevious(newItem);
-					this.root = (Num) newItem;	
+					this.root = newItem;	
 				}
 				return true;
 			}
@@ -83,19 +79,15 @@ public class IntegerList implements GenericList
 		return false;
 	}
 
-	/**
-	 * Deleting an items involves finding the item in the list, and setting right and left links
-	 * between its previous and next elements. 
-	 */
 	@Override
-	public boolean removeItem(GenericListItem itemToRemove)
+	public boolean removeItem(ShapeItem itemToRemove)
 	{
 		if(itemToRemove != null)
 		{
 			System.out.println("Removing " + itemToRemove.getValue());
 		}
 		
-		Num currentItem = this.root;
+		ShapeItem currentItem = this.root;
 //		traverse through the list
 		while(currentItem.next() != null)
 		{
@@ -106,7 +98,7 @@ public class IntegerList implements GenericList
 //				current item is the root
 				if(currentItem == this.root)
 				{
-					this.root = (Num) currentItem.next();
+					this.root = currentItem.next();
 				}
 				else
 				{
@@ -128,7 +120,7 @@ public class IntegerList implements GenericList
 			}
 			else if(comparison < 0)
 			{
-				currentItem = (Num) currentItem.next();
+				currentItem = currentItem.next();
 			}
 			else
 			{
@@ -140,18 +132,18 @@ public class IntegerList implements GenericList
 	}
 
 	@Override
-	public void traverse(GenericListItem gli)
+	public void traverse(ShapeItem shape)
 	{
-		if(gli == null)
+		if(shape == null)
 		{
 			System.out.println("List is empty");
 		}
 		else
 		{
-			while(gli != null)
+			while(shape != null)
 			{
-				System.out.println(gli.getValue());
-				gli = gli.next();
+				System.out.println(shape.getValue());
+				shape = shape.next();
 			}
 		}
 	}

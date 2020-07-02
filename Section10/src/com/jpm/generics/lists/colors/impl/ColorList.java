@@ -1,37 +1,35 @@
-package com.jpm.abstractclass.challenge.integerlist.impl;
+package com.jpm.generics.lists.colors.impl;
 
-import com.jpm.abstractclass.challenge.base.GenericList;
-import com.jpm.abstractclass.challenge.base.GenericListItem;
-import com.jpm.abstractclass.challenge.stringlist.impl.Letter;
+import com.jpm.generics.lists.base.GenericList;
 
-public class IntegerList implements GenericList
+public class ColorList implements GenericList<ColorItem>
 {
-	private Num root = null;
+	private ColorItem root = null;
 	
-	public IntegerList(Num root)
+	public ColorList(ColorItem root)
 	{
 		this.root = root;
 	}
 
 	@Override
-	public GenericListItem getRoot()
+	public ColorItem getRoot()
 	{
 		return this.root;
 	}
 
 	@Override
-	public boolean addItem(GenericListItem newItem)
+	public boolean addItem(ColorItem newItem)
 	{
 //		If the root is null, the list is empty, therefore, 
 //		the element being added is the root
 		if(this.root == null)
 		{
-			this.root = (Num) newItem;
+			this.root = newItem;
 			return true;
 		}
 		
 //		If list is not empty, we start the process of figuring out where to add newItem
-		Num currentItem = this.root;
+		ColorItem currentItem = this.root;
 
 		while(currentItem != null)
 		{
@@ -43,7 +41,7 @@ public class IntegerList implements GenericList
 //				we cycle through the elements until we find the right spot
 				if(currentItem.next() != null)
 				{
-					currentItem = (Num) currentItem.next();
+					currentItem = currentItem.next();
 				}
 				else
 				{
@@ -70,7 +68,7 @@ public class IntegerList implements GenericList
 				{
 					newItem.setNext(currentItem);
 					currentItem.setPrevious(newItem);
-					this.root = (Num) newItem;	
+					this.root = newItem;	
 				}
 				return true;
 			}
@@ -83,19 +81,15 @@ public class IntegerList implements GenericList
 		return false;
 	}
 
-	/**
-	 * Deleting an items involves finding the item in the list, and setting right and left links
-	 * between its previous and next elements. 
-	 */
 	@Override
-	public boolean removeItem(GenericListItem itemToRemove)
+	public boolean removeItem(ColorItem itemToRemove)
 	{
 		if(itemToRemove != null)
 		{
 			System.out.println("Removing " + itemToRemove.getValue());
 		}
 		
-		Num currentItem = this.root;
+		ColorItem currentItem = this.root;
 //		traverse through the list
 		while(currentItem.next() != null)
 		{
@@ -106,7 +100,7 @@ public class IntegerList implements GenericList
 //				current item is the root
 				if(currentItem == this.root)
 				{
-					this.root = (Num) currentItem.next();
+					this.root = currentItem.next();
 				}
 				else
 				{
@@ -128,7 +122,7 @@ public class IntegerList implements GenericList
 			}
 			else if(comparison < 0)
 			{
-				currentItem = (Num) currentItem.next();
+				currentItem = currentItem.next();
 			}
 			else
 			{
@@ -140,18 +134,18 @@ public class IntegerList implements GenericList
 	}
 
 	@Override
-	public void traverse(GenericListItem gli)
+	public void traverse(ColorItem color)
 	{
-		if(gli == null)
+		if(color == null)
 		{
 			System.out.println("List is empty");
 		}
 		else
 		{
-			while(gli != null)
+			while(color != null)
 			{
-				System.out.println(gli.getValue());
-				gli = gli.next();
+				System.out.println(color.getValue());
+				color = color.next();
 			}
 		}
 	}
