@@ -1,4 +1,4 @@
-package com.example.awtSample;
+package com.jpm.section11.example.awtSample;
 
 import java.awt.Font;
 import java.awt.Frame;

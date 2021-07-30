@@ -1,6 +1,6 @@
 package com.jpm.section11.scope.accessmodifiers;
 
-interface AccessibleTest
+public interface AccessibleTest
 {
 	int SOME_CONSTANT = 100;
 	public void methodA();

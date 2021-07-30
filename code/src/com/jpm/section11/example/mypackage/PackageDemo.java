@@ -1,4 +1,4 @@
-package com.example.mypackage;
+package com.jpm.section11.example.mypackage;
 
 public class PackageDemo
 {

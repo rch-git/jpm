@@ -1,4 +1,4 @@
-package com.example.awtSample;
+package com.jpm.section11.example.awtSample;
 
 public class LaunchMyWindow
 {
