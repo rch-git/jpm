@@ -2,9 +2,9 @@ package com.jpm.section09.interfaces.telephone;
 
 public interface ITelephone
 {
-	public void powerOn();
+	void powerOn();
 	
-	public void dial(int phoneNumber);
+	void dial(int phoneNumber);
 	
 	void answer();
 	

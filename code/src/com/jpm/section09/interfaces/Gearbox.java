@@ -1,4 +1,4 @@
-package com.jpm.section09.pjm.interfaces;
+package com.jpm.section09.interfaces;
 
 public class Gearbox
 {

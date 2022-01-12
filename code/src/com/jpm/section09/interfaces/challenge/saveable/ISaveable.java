@@ -1,4 +1,4 @@
-package com.jpm.section09.jpm.interfaces.challenge.saveable;
+package com.jpm.section09.interfaces.challenge.saveable;
 
 import java.util.ArrayList;
 
