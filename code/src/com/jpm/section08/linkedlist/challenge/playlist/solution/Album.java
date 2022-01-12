@@ -35,7 +35,6 @@ public class Album
 			{
 				return checkedSong;
 			}
-			
 		}
 		return null;
 	}
@@ -64,33 +63,3 @@ public class Album
 		return false;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -50,7 +50,6 @@ public class PlaylistOps
 		albums.get(1).addToPlayList("S15", playList);
 		
 		play(playList);
-		
 	}
 	
 	private static void play(LinkedList<Song> playList)
@@ -159,7 +158,6 @@ public class PlaylistOps
 						listIterator.remove();
 						listIterator.previous();
 					}
-				
 			}
 		}
 	}
@@ -172,7 +170,6 @@ public class PlaylistOps
 //			When printing out the iterator via the next() method, toString() is invoked
 			System.out.println(iterator.next());
 		}
-		
 	}
 	
 	private static void printMenu()
@@ -186,20 +183,3 @@ public class PlaylistOps
 		System.out.println("6. remove");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

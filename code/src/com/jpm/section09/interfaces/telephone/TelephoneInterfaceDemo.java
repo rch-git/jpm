@@ -1,6 +1,6 @@
 package com.jpm.section09.interfaces.telephone;
 
-public class InterfaceDemo
+public class TelephoneInterfaceDemo
 {
 
 	public static void main(String[] args)
@@ -16,5 +16,4 @@ public class InterfaceDemo
 		myPhone.callPhone(123456789);
 		myPhone.answer();
 	}
-
 }

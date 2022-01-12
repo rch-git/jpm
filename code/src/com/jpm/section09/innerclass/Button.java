@@ -1,4 +1,4 @@
-package com.jpm.section09.jom.innerclass;
+package com.jpm.section09.innerclass;
 
 public class Button
 {
