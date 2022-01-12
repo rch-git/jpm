@@ -1,4 +1,4 @@
-package com.jpm.section09.pjm.interfaces.telephone;
+package com.jpm.section09.interfaces.telephone;
 
 public class MobilePhone implements ITelephone
 {
