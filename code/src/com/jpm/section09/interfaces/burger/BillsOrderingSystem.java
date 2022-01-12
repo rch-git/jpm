@@ -1,4 +1,4 @@
-package com.jpm.section09.pjm.interfaces.burger;
+package com.jpm.section09.interfaces.burger;
 
 import java.text.NumberFormat;
 import java.util.List;
