@@ -2,7 +2,7 @@ package com.jpm.section09.innerclass;
 
 import java.util.Scanner;
 
-import com.jpm.section09.jom.innerclass.Button.OnClickListener;
+import com.jpm.section09.innerclass.Button.OnClickListener;
 
 public class ButtonMain
 {
