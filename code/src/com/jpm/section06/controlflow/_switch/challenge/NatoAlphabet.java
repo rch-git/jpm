@@ -4,7 +4,7 @@ public class NatoAlphabet
 {
 	public static void main(String[] args)
 	{
-		char c = 'A';
+		char c = 'X';
 		System.out.println("NATO Alphabet: " + natoAlphabet(c));
 	}
 	
